@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>My Profile</h1>
+  </header>
+
+  <main>
+    <section class="card p-6 rounded-xl" id="profile-card">
+      <img class="card__avatar" src="/zzz3.jpg" alt="Фото профиля">
+      <div class="card__info">
+        <h2 class="card__name">Zarina Shynbolatova</h2>
+        <p class="card__bio">
+          Hi! I'm learning web development and building my first interactive profile.
+          I enjoy HTML, CSS, and JavaScript. I'm open to new projects and meeting new people.
+        </p>
+        <ul class="card__links gap-2">
+          <li><a href="mailto:shynbolatovazarina@gmail.com">Email</a></li>
+          <li><a href="https://github.com/ShynbolatovaZarina" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+        <button id="like-btn" class="like-btn" type="button">🤍 Like</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>2026 · My Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
