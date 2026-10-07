@@ -129,3 +129,79 @@ main {
     flex-direction: row;
   }
 }
+/* ===== Week 4: navigation, likes counter, pages ===== */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.site-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.site-nav a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.site-nav a:hover {
+  background-color: #1f2937;
+}
+
+.site-nav a.active {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+.site-header__likes {
+  font-size: 14px;
+  color: #fda4af;
+}
+
+.page {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 2px solid #6366f1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.page__title {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.page__text {
+  margin: 0 0 16px;
+  color: #4b5563;
+}
+
+.page__link {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: #6366f1;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page .skills,
+.page .card__links {
+  justify-content: center;
+}

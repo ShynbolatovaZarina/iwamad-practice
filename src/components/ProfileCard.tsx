@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import SkillBadge from './SkillBadge';
-import type { Skill } from '../types';
 
 type ProfileCardProps = {
   name: string;
@@ -8,7 +6,6 @@ type ProfileCardProps = {
   bio: string;
   email: string;
   githubUrl: string;
-  skills: Skill[];
   avatarUrl?: string; // the ? means optional
 };
 
@@ -18,14 +15,13 @@ function ProfileCard({
   bio,
   email,
   githubUrl,
-  skills,
   avatarUrl,
 }: ProfileCardProps) {
-  const [liked, setLiked] = useState(false);
+  const [likes, setLikes] = useState(0);
 
   return (
     <section
-      className={`card p-6 rounded-xl${liked ? ' card--liked' : ''}`}
+      className={`card p-6 rounded-xl${likes > 0 ? ' card--liked' : ''}`}
       id="profile-card"
     >
       {avatarUrl ? (
@@ -40,17 +36,6 @@ function ProfileCard({
         <p className="card__role">{role}</p>
         <p className="card__bio">{bio}</p>
 
-        <h3 className="card__section-title">Skills</h3>
-        {skills.length > 0 ? (
-          <ul className="skills">
-            {skills.map((skill) => (
-              <SkillBadge key={skill.id} skill={skill} />
-            ))}
-          </ul>
-        ) : (
-          <p className="card__empty">No skills added yet.</p>
-        )}
-
         <ul className="card__links gap-2">
           <li>
             <a href={`mailto:${email}`}>Email</a>
@@ -64,10 +49,10 @@ function ProfileCard({
 
         <button
           type="button"
-          className={`like-btn${liked ? ' liked' : ''}`}
-          onClick={() => setLiked((prev) => !prev)}
+          className={`like-btn${likes > 0 ? ' liked' : ''}`}
+          onClick={() => setLikes((prev) => prev + 1)}
         >
-          {liked ? '❤️ Liked' : '🤍 Like'}
+          {likes > 0 ? '❤️' : '🤍'} Like ({likes})
         </button>
       </div>
     </section>
