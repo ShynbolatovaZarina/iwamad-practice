@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import LikeButton from './LikeButton';
 
 type ProfileCardProps = {
   name: string;
@@ -17,13 +17,8 @@ function ProfileCard({
   githubUrl,
   avatarUrl,
 }: ProfileCardProps) {
-  const [likes, setLikes] = useState(0);
-
   return (
-    <section
-      className={`card p-6 rounded-xl${likes > 0 ? ' card--liked' : ''}`}
-      id="profile-card"
-    >
+    <section className="card p-6 rounded-xl" id="profile-card">
       {avatarUrl ? (
         <img className="card__avatar" src={avatarUrl} alt={`Photo of ${name}`} />
       ) : (
@@ -47,13 +42,7 @@ function ProfileCard({
           </li>
         </ul>
 
-        <button
-          type="button"
-          className={`like-btn${likes > 0 ? ' liked' : ''}`}
-          onClick={() => setLikes((prev) => prev + 1)}
-        >
-          {likes > 0 ? '❤️' : '🤍'} Like ({likes})
-        </button>
+        <LikeButton />
       </div>
     </section>
   );
