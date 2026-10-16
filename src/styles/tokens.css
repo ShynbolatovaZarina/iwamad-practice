@@ -1,0 +1,17 @@
+/* One CSS variable per Figma variable (the slash becomes a dash).
+   Values come from design/HANDOFF.md. */
+:root {
+  --color-primary: #1d4ed8;
+  --color-on-primary: #ffffff;
+  --color-text: #1f2937;
+  /* Design value #9ca3af is only 2.54 : 1 on white (needs 4.5 : 1), so this one is darker. */
+  --color-text-muted: #6b7280;
+  --color-surface: #ffffff;
+  --color-border: #d1d5db;
+
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+
+  --radius-md: 8px;
+}
