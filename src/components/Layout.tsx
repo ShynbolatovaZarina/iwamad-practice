@@ -5,7 +5,7 @@ import Footer from './Footer';
 function Layout() {
   return (
     <>
-      <Header title="My Profile" />
+      <Header title="Zarina Shynbolatova" />
       <main>
         <Outlet />
       </main>

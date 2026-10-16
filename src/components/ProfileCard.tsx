@@ -1,3 +1,4 @@
+import Card from './ui/Card';
 import LikeButton from './LikeButton';
 
 type ProfileCardProps = {
@@ -18,7 +19,7 @@ function ProfileCard({
   avatarUrl,
 }: ProfileCardProps) {
   return (
-    <section className="card p-6 rounded-xl" id="profile-card">
+    <Card className="profile-card">
       {avatarUrl ? (
         <img className="card__avatar" src={avatarUrl} alt={`Photo of ${name}`} />
       ) : (
@@ -31,7 +32,7 @@ function ProfileCard({
         <p className="card__role">{role}</p>
         <p className="card__bio">{bio}</p>
 
-        <ul className="card__links gap-2">
+        <ul className="card__links">
           <li>
             <a href={`mailto:${email}`}>Email</a>
           </li>
@@ -44,7 +45,7 @@ function ProfileCard({
 
         <LikeButton />
       </div>
-    </section>
+    </Card>
   );
 }
 

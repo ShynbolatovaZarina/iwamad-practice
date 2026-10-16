@@ -3,7 +3,7 @@ function ContactPage() {
     <section className="page">
       <h2 className="page__title">Contact</h2>
       <p className="page__text">Want to get in touch? Reach me here:</p>
-      <ul className="card__links gap-2">
+      <ul className="card__links">
         <li>
           <a href="mailto:shynbolatovazarina@gmail.com">Email</a>
         </li>

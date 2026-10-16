@@ -1,16 +1,18 @@
 import { useLikes } from '../context/LikesContext';
+import Button from './ui/Button';
 
 function LikeButton() {
   const { likes, addLike } = useLikes();
+  const label = `Like (${likes} ${likes === 1 ? 'like' : 'likes'})`;
 
   return (
-    <button
-      type="button"
-      className={`like-btn${likes > 0 ? ' liked' : ''}`}
+    <Button
+      variant={likes > 0 ? 'primary' : 'secondary'}
+      aria-label={label}
       onClick={addLike}
     >
       {likes > 0 ? '❤️' : '🤍'} Like ({likes})
-    </button>
+    </Button>
   );
 }
 

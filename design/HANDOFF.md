@@ -14,6 +14,8 @@ Components → React files:
 Button variants → prop: `variant = 'primary' | 'secondary'` (Figma: Primary, Secondary; the default is primary)
 - Primary: fill `color/primary`, text `color/on-primary`, no stroke, radius 8
 - Secondary: fill `color/surface`, text and 1px inside stroke `color/primary`, radius 8
+- Both: padding 8 horizontal / 16 vertical (the two padding fields in Figma; orientation checked against the exported Button size), text 12
+- Tag (measured on the exported PostCard image): a pill with a 1px `color/border` border, text 12 `color/text`, padding about 8 vertical / 4 horizontal
 
 PostCard layout:
 direction vertical, gap 12, padding 16, radius 8
