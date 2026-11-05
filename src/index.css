@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f3f4f6;
+  color: var(--color-text);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-6);
+}
+
+/* the Card itself lives in styles/ui.css; this is only the profile card's own size and layout */
+.card.profile-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  gap: var(--space-4);
+}
+
+.card__avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card__avatar--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.card__info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card__role {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.card__bio {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.card__section-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0;
+  margin: 0;
+}
+
+.card__empty {
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.card__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.card__links a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+.card__links a:hover {
+  border-color: var(--color-primary);
+}
+
+@media (min-width: 600px) {
+  .card.profile-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    max-width: 600px;
+  }
+
+  .card__info {
+    align-items: flex-start;
+  }
+
+  .skills {
+    justify-content: flex-start;
+  }
+
+  .card__links {
+    flex-direction: row;
+  }
+}

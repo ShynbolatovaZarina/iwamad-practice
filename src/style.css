@@ -1,0 +1,118 @@
+/* ===== Header (phone first), navigation, footer and pages ===== */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.site-nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.site-header__likes {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+/* one row from 640px */
+@media (min-width: 640px) {
+  .site-header {
+    flex-direction: row;
+  }
+
+  .site-header__brand {
+    flex-direction: row;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    gap: var(--space-4);
+  }
+
+  .site-header__likes {
+    margin-left: auto;
+  }
+}
+
+.site-footer {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.page {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.page__title {
+  margin: 0 0 12px;
+  font-size: 22px;
+}
+
+.page__text {
+  margin: 0 0 16px;
+  color: var(--color-text);
+}
+
+.page__link {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  text-decoration: none;
+}
+
+.page .skills,
+.page .card__links {
+  justify-content: center;
+}
