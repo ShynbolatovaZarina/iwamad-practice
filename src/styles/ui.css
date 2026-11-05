@@ -71,3 +71,13 @@
 
 /* the page card centres its text; the form reads better left-aligned */
 .page .form { margin: 0 auto; text-align: left; }
+
+
+/* Events (Week 7) */
+.card-grid { display: grid; gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.card-grid h2 { margin-top: 0; font-size: 1.25rem; }
+.card-grid .card { max-width: none; }
+
+/* the page is a flex item in <main>, so it needs a width to let the grid fill the row */
+.events { width: 100%; max-width: 960px; }
