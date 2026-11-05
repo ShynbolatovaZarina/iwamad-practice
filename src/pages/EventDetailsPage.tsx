@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router';
+import EventSignupForm from '../components/EventSignupForm';
 import { events } from '../data/events';
 
 function EventDetailsPage() {
@@ -20,7 +21,10 @@ function EventDetailsPage() {
       <h1 className="page__title">{event.title}</h1>
       <p>{event.date}</p>
       <p>{event.place}</p>
-      <Link to="/events">Back to events</Link>
+      <EventSignupForm key={event.id} event={event} />
+      <p>
+        <Link to="/events">Back to events</Link>
+      </p>
     </section>
   );
 }
